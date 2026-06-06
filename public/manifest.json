@@ -1,0 +1,33 @@
+{
+  "name": "Chef-chan — Your Brutally Honest Kitchen Demon",
+  "short_name": "Chef-chan",
+  "description": "AI-powered meal planning with a sassy anime chef. Vibe-based recipes, grocery lists, swaps, and budget checks.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#EAE7F5",
+  "theme_color": "#EAE7F5",
+  "categories": ["food", "lifestyle", "utilities"],
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "screenshots": []
+}

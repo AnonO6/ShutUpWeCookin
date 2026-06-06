@@ -1,0 +1,110 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-lavender: #eae7f5;
+  --color-coral: #ff6b6b;
+  --color-coral-dark: #e85555;
+  --color-mint: #b8f5d8;
+  --color-lilac: #d4c8ff;
+  --color-yellow-soft: #ffe4a8;
+  --color-sky: #b8e8ff;
+  --color-ink: #2d2a3e;
+  --color-muted: #7a7590;
+  --font-display: var(--font-syne);
+  --font-body: var(--font-dm-sans);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  background: var(--color-lavender);
+  color: var(--color-ink);
+  font-family: var(--font-body), system-ui, sans-serif;
+}
+
+::selection {
+  background: #ffb4c8;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes stir {
+  0%,
+  100% {
+    transform: rotate(-4deg);
+  }
+  50% {
+    transform: rotate(4deg);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-stir {
+  animation: stir 0.6s ease-in-out infinite;
+}
+
+.btn-shimmer {
+  background: linear-gradient(
+    90deg,
+    var(--color-coral) 0%,
+    #ff8a8a 50%,
+    var(--color-coral) 100%
+  );
+  background-size: 200% auto;
+}
+
+.btn-shimmer:hover {
+  animation: shimmer 1.5s linear infinite;
+}
+
+.card-shadow {
+  box-shadow: 0 8px 32px rgba(45, 42, 62, 0.08);
+}
+
+.chip-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.chip-scroll {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.speech-tail::before {
+  content: "";
+  position: absolute;
+  left: -8px;
+  top: 18px;
+  width: 0;
+  height: 0;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-right: 10px solid white;
+}
