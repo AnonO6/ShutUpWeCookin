@@ -28,6 +28,25 @@ Open [http://localhost:3000](http://localhost:3000).
 
 Works without an API key — falls back to mock data for demos.
 
+## PWA
+
+- Installable on iOS (Share → Add to Home Screen) and Android/Chrome (native install button)
+- Service worker caches the app shell; `/offline` fallback when network drops
+- Manifest + 192/512 icons + Apple touch icon
+
+**Live:** [https://chef-chan.vercel.app](https://chef-chan.vercel.app)
+
+## Deploy (Vercel)
+
+```bash
+vercel link --project chef-chan
+vercel env add OPENAI_API_KEY production
+vercel env add OPENAI_MODEL production
+vercel deploy --prod
+```
+
+Or connect the GitHub repo in the Vercel dashboard for auto-deploys on push.
+
 ## Stack
 
 - Next.js 15 (App Router)
